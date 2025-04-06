@@ -12,7 +12,7 @@ This project is a chatbot designed to assist users with queries related to colle
 1. Clone the repository:
    ```bash
    git clone <repository-url>
-   cd college-website
+   cd College-Chatbot-main
    ```
 
 2. Install dependencies:
