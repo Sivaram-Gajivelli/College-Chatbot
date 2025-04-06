@@ -1,0 +1,730 @@
+/* General body styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styling */
+.header {
+    background-image: url('images/header.jpg'); /* Use header.jpg as the background */
+    background-size: cover; /* Ensure the image covers the entire header */
+    background-position: center; /* Center the image */
+    height: 100px; /* Adjust height to fit the image */
+    color: #ffffff; /* Change text color to white for better contrast */
+    padding: 20px 0;
+    font-weight: bold;
+    text-align: center; /* Center-align the text */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    margin: 0 auto;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: #004080; /* Add a background color to the navbar */
+    padding: 10px 20px; /* Add padding for spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    display: flex; /* Add flexbox to center contents */
+    justify-content: center; /* Center contents horizontally */
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center; 
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin-left: 20px;
+    position: relative;
+}
+
+.nav-link {
+    color: #ffffff; /* Change text color to white */
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Add hover transition */
+}
+
+.nav-link:hover, .nav-link:focus, .nav-link:active {
+    background-color: #0056b3; /* Change background on hover */
+    border-radius: 5px;
+    color: #ffffff; /* Ensure text remains white */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff; /* White background for dropdown */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow for dropdown */
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    display: block; /* Show dropdown on hover or focus */
+}
+
+.dropdown-item {
+    color: #000000; /* Black text for dropdown items */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease; /* Add hover transition */
+}
+
+.dropdown-item:hover {
+    background-color: #f0f0f0; /* Light gray background on hover */
+}
+
+/* Responsive adjustments for navbar */
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column; /* Stack items vertically */
+        display: none; /* Hide by default */
+        width: 100%;
+        background-color: #004080; /* Match navbar background */
+    }
+
+    .nav-menu.active {
+        display: flex; /* Show when active */
+    }
+
+    .nav-item {
+        margin: 5px 0;
+    }
+
+    .dropdown-content {
+        position: static; /* Make dropdown static for mobile */
+        box-shadow: none;
+        width: 100%;
+    }
+}
+
+/* Sticky header styling */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.sticky-padding {
+    padding-top: 70px; /* Adjust based on the header height */
+}
+
+/* Navigation styling */
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+.nav-item {
+    margin-left: 20px;
+    position: relative;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 15px;
+    display: block;
+}
+
+.nav-link:hover, .nav-link:focus, .nav-link:active {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    color: #007bff;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    display: block;
+}
+
+.dropdown-item {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-item:hover {
+    background-color: #ddd;
+}
+
+/* Mobile menu button */
+.mobile-menu-btn {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Hero section styling */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 80vh;  /* Reduced from 100vh */
+    overflow: hidden;
+    margin-bottom: 0;  /* Remove bottom margin */
+}
+
+.hero-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    position: absolute;
+    margin: 0;  /* Remove any margins */
+}
+
+/* About section styling */
+.about {
+    background-color: #f0f8ff; /* Light blue background */
+    padding: 40px 0;  /* Reduced top padding */
+    margin-top: 0;    /* Remove top margin */
+    text-align: center;
+}
+
+.about-text {
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+.about-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #999;
+}
+
+/* Programs section styling */
+.programs-container {
+    background-color: #f5f5f5; 
+    padding: 60px 0;
+    text-align: center;
+}
+
+.programs {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.program-content {
+    width: 40%;
+    background-color: #f8f8f8;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.program-title {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.program-desc {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.program-link {
+    text-decoration: none;
+    color: #004080;
+    font-weight: bold;
+}
+
+/* Responsive styling for programs section */
+@media (max-width: 768px) {
+    .program-content {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+/* Campus section styling */
+.campus-container {
+    background-color: #e6f7ff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.campus-gallery {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.gallery-item {
+    width: 40%; 
+    margin: 30px; 
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-item:hover .gallery-caption {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* Footer styling */
+.footer-container {
+    background-color: #004080;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.footer-text, .footer-links, .footer-contact {
+    flex: 1;
+    margin: 20px;
+    min-width: 200px;
+}
+
+.footer-text h3, .footer-links h3, .footer-contact h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-text p, .footer-links ul, .footer-contact p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 5px;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #ccc;
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+}
+
+.text-center {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #003366;
+    color: #ccc;
+    font-size: 14px;
+}
+
+/* Responsive header adjustments */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .college-name {
+        font-size: 24px;
+    }
+
+    .college-tagline {
+        font-size: 16px;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    .nav-menu {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-item {
+        margin: 5px 0;
+        width: 100%;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        width: 100%;
+    }
+
+    .program-content {
+        width: calc(100% - 40px);
+        margin: 10px 20px;
+    }
+
+    .gallery-item {
+        width: calc(100% - 40px);
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-text, 
+    .footer-links, 
+    .footer-contact {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+/* Fix image responsiveness */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Chatbot Button Styling */
+#open-chatbot {
+    position: relative;
+    background-image: url(images/bot.png);
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: wave-effect-1 2s infinite;
+}
+
+#open-chatbot::before,
+#open-chatbot::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: wave-effect-2 2s infinite;
+    z-index: -1;
+}
+
+#open-chatbot::after {
+    animation: wave-effect-3 2s infinite;
+}
+
+@keyframes wave-effect-1 {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 0 20px rgba(0, 123, 255, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+    }
+}
+
+@keyframes wave-effect-2 {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 0 30px rgba(0, 123, 255, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+    }
+}
+
+@keyframes wave-effect-3 {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.1);
+    }
+    50% {
+        box-shadow: 0 0 0 40px rgba(0, 123, 255, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+    }
+}
+
+/* Chatbot Container Styling */
+#chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 350px;
+    height: 500px;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+#chatbot-header {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#chatbot-header button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#chatbot-body {
+    padding: 15px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: calc(90% - 100px); /* Adjust height to fit within the container */
+    margin-bottom: 50%;
+}
+
+.user-message {
+    background-color: #1a89ff; /* Light grey background for user messages */
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 80%;
+    align-self: flex-end;
+}
+
+.bot-message {
+    background-color: #e0e0e0; /* Slightly lighter grey background for bot messages */
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 80%;
+    height: fit-content;
+    align-self: flex-start;
+}
+
+/* Styles for clickable options inside bot-message */
+.bot-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.option-box {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    width: auto; /* Adjust width to fit content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px; /* Add spacing between options */
+}
+
+.bot-options {
+    flex-direction: column; /* Display options vertically */
+    align-items: flex-start; /* Align options to the start */
+}
+
+.option-box:hover {
+    background-color: #0056b3;
+}
+
+#chatbot-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 96%;
+    padding: 10px;
+    background-color: #f1f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    border-radius: 15px;
+    gap: 10px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+#chatbot-footer input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+#chatbot-footer button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Scroll Button Styling */
+#scroll-button {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    font-size: 18px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+#scroll-button i {
+    font-size: 18px;
+}
+
+#scroll-button:hover {
+    background-color: #0056b3;
+}
+
+/* Add prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* Add intermediate breakpoint */
+@media (max-width: 992px) {
+    .header-container {
+        padding: 10px 20px;
+    }
+    
+    .college-name {
+        font-size: 32px;
+    }
+    
+    .program-content {
+        width: calc(50% - 40px);
+    }
+}
+
+
