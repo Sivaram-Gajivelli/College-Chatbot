@@ -496,7 +496,7 @@ img {
     font-size: 16px;
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    animation: wave-effect-1 2s infinite;
+    animation: wave-effect-1 4s infinite;
 }
 
 #open-chatbot::before,
@@ -509,12 +509,12 @@ img {
     height: 100%;
     border-radius: 50%;
     transform: translate(-50%, -50%);
-    animation: wave-effect-2 2s infinite;
+    animation: wave-effect-2 4s infinite;
     z-index: -1;
 }
 
 #open-chatbot::after {
-    animation: wave-effect-3 2s infinite;
+    animation: wave-effect-3 4s infinite;
 }
 
 @keyframes wave-effect-1 {
@@ -531,7 +531,7 @@ img {
 
 @keyframes wave-effect-2 {
     0% {
-        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.3);
+        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.4);
     }
     50% {
         box-shadow: 0 0 0 30px rgba(0, 123, 255, 0);
@@ -541,7 +541,32 @@ img {
     }
 }
 
+
 @keyframes wave-effect-3 {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 0 40px rgba(0, 123, 255, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+    }
+}
+
+@keyframes wave-effect-4 {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 0 40px rgba(0, 123, 255, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+    }
+}
+
+@keyframes wave-effect-5 {
     0% {
         box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.1);
     }
