@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify, send_from_directory
-from sklearn.metrics.pairwise import cosine_similarity
+# from sklearn.metrics.pairwise import cosine_similarity
 import os
 from dotenv import load_dotenv  # Import dotenv to load environment variables
 # Import Firebase Admin SDK
